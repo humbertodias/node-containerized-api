@@ -1,0 +1,15 @@
+###
+GET http://localhost:3000
+
+###
+POST http://localhost:3000/exam
+Content-Type: application/json
+{
+
+}
+
+###
+GET http://localhost:3000/exam
+
+###
+GET http://localhost:3000/exam/1
