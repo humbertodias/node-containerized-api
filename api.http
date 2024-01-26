@@ -4,6 +4,7 @@ GET http://localhost:3000
 ###
 POST http://localhost:3000/exams
 Content-Type: application/json
+
 {
       "id": "CLF-C02",
       "name": "AWS Certified: Cloud Practitioner",
@@ -21,4 +22,13 @@ Content-Type: application/json
 GET http://localhost:3000/exams
 
 ###
-GET http://localhost:3000/exams/1
+GET http://localhost:3000/exams/CLF-C02
+
+
+###
+PATCH http://localhost:3000/exams/CLF-C02
+Content-Type: application/json
+
+{
+      "score": 800
+}
