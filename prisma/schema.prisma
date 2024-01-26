@@ -10,7 +10,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Exams {
+model Exam {
   id String @id
   name String
   image String
@@ -23,4 +23,31 @@ model Exams {
   score Int
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  Quetion Question[]
+}
+
+model Question {
+  id Int @id @default(autoincrement())
+  question String
+  answers Answer[]
+  hint String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  exam Exam @relation(fields: [examId], references: [id])
+  examId String
+}
+
+model Answer {
+  id Int @id @default(autoincrement())
+  statement String
+  type AnswerType @default(CORRECT)
+  question Question @relation(fields: [questionId], references: [id])
+  questionId Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+enum AnswerType {
+  CORRECT
+  INCORRECT
 }
