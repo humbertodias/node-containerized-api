@@ -2,14 +2,23 @@
 GET http://localhost:3000
 
 ###
-POST http://localhost:3000/exam
+POST http://localhost:3000/exams
 Content-Type: application/json
 {
-
+      "id": "CLF-C02",
+      "name": "AWS Certified: Cloud Practitioner",
+      "image": "badges/aws-certified-cloud-practitioner.png",
+      "description": "The AWS Certified Cloud Practitioner validates foundational, high-level understanding of AWS Cloud, services, and terminology.  This is a good starting point on the AWS Certification journey for individuals with no prior IT or cloud experience switching to a cloud career or for line-of-business employees looking for foundational cloud literacy.",
+      "guide": "https://d1.awsstatic.com/training-and-certification/docs-cloud-practitioner/AWS-Certified-Cloud-Practitioner_Exam-Guide.pdf",
+      "sample": "https://d1.awsstatic.com/training-and-certification/docs-cloud-practitioner/AWS-Certified-Cloud-Practitioner_Sample-Questions.pdf",
+      "practice": "https://explore.skillbuilder.aws/learn/course/external/view/elearning/14050/aws-certified-cloud-practitioner-official-practice-question-set-clf-c02-english",
+      "category": "foundational",
+      "duration": "160min",
+      "score": 700
 }
 
 ###
-GET http://localhost:3000/exam
+GET http://localhost:3000/exams
 
 ###
-GET http://localhost:3000/exam/1
+GET http://localhost:3000/exams/1
